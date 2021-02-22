@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Tetris</string>
+    <string name="app_nameUpper">TETRIS</string>
+    <string name="configuration">CONFIGURATION</string>
+</resources>
