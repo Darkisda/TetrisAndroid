@@ -2,4 +2,10 @@
     <string name="app_name">Tetris</string>
     <string name="app_nameUpper">TETRIS</string>
     <string name="configuration">CONFIGURATION</string>
+    <string name="EASY">EASY</string>
+    <string name="MEDIUM">MEDIUM</string>
+    <string name="HARD">HARD</string>
+    <string name="NEWGAME">NEW GAME</string>
+    <string name="CONTINUE">CONTINUE</string>
+    <string name="CONFIGURATION">CONFIGURATION</string>
 </resources>
