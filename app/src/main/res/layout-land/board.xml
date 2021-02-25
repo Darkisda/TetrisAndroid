@@ -12,16 +12,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         tools:context=".Board"
         >
 
         <GridLayout
             android:id="@+id/header"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:columnCount="3"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:columnCount="1"
+            android:rowCount="3"
             android:columnOrderPreserved="true"
+            android:orientation="vertical"
             >
             <Button
                 android:id="@+id/pauseButton"
@@ -30,6 +32,7 @@
                 android:layout_margin="@dimen/margin"
                 android:layout_row="0"
                 android:layout_column="0"
+                android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:text="@string/PAUSE" />
 
@@ -38,9 +41,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margin"
-                android:layout_row="0"
-                android:layout_column="1"
+                android:layout_row="1"
+                android:layout_column="0"
                 android:layout_columnWeight="3"
+                android:layout_rowWeight="1"
                 android:textAlignment="center"
                 android:text="@={game.difficulty}"
                 android:textSize="20dp"
@@ -52,9 +56,10 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margin"
                 android:textAlignment="center"
-                android:layout_row="0"
-                android:layout_column="2"
+                android:layout_row="2"
+                android:layout_column="0"
                 android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
                 android:text="PONTOS"
                 android:textSize="20dp"
                 android:gravity="center_horizontal" />
@@ -62,16 +67,18 @@
 
         <GridLayout
             android:id="@+id/gridBoardLayout"
-            android:layout_width="match_parent"
-            android:layout_height="500dp">
+            android:layout_width="400dp"
+            android:layout_height="match_parent">
 
         </GridLayout>
 
         <GridLayout
             android:id="@+id/buttonsContainer"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:orientation="horizontal"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:rowCount="3"
+            android:columnCount="1"
             >
 
             <Button
@@ -81,27 +88,30 @@
                 android:layout_row="0"
                 android:layout_column="0"
                 android:layout_columnWeight="1"
-                android:layout_margin="@dimen/margin_small"
+                android:layout_rowWeight="1"
+                android:layout_margin="@dimen/margin"
                 android:text="LEFT" />
 
             <Button
                 android:id="@+id/downButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="0"
-                android:layout_column="1"
+                android:layout_row="1"
+                android:layout_column="0"
                 android:layout_columnWeight="1"
-                android:layout_margin="@dimen/margin_small"
+                android:layout_rowWeight="1"
+                android:layout_margin="@dimen/margin"
                 android:text="DOWN" />
 
             <Button
                 android:id="@+id/rightButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="0"
-                android:layout_column="2"
+                android:layout_row="2"
+                android:layout_column="0"
                 android:layout_columnWeight="1"
-                android:layout_margin="@dimen/margin_small"
+                android:layout_rowWeight="1"
+                android:layout_margin="@dimen/margin"
                 android:text="RIGHT" />
 
         </GridLayout>
