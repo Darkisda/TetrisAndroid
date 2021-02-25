@@ -12,42 +12,59 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        tools:context=".Board">
+        android:orientation="vertical"
+        tools:context=".Board"
+        >
 
         <GridLayout
-            android:id="@+id/gridLayout"
+            android:id="@+id/header"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="60dp"
             android:columnCount="3"
+            android:columnOrderPreserved="true"
             >
-
             <Button
-                android:id="@+id/button"
+                android:id="@+id/pauseButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin"
                 android:layout_row="0"
                 android:layout_column="0"
-                android:layout_margin="@dimen/margin"
+                android:layout_columnWeight="1"
                 android:text="@string/PAUSE" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/difficulty"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin"
                 android:layout_row="0"
                 android:layout_column="1"
-                android:layout_margin="@dimen/margin"
-                android:text="@={game.difficulty}" />
+                android:layout_columnWeight="3"
+                android:textAlignment="center"
+                android:text="@={game.difficulty}"
+                android:textSize="20dp"
+                android:gravity="center_horizontal" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/points"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin"
+                android:textAlignment="center"
                 android:layout_row="0"
                 android:layout_column="2"
+                android:layout_columnWeight="1"
                 android:text="PONTOS"
-                android:layout_margin="@dimen/margin"
-                android:textSize="25dp" />
+                android:textSize="20dp"
+                android:gravity="center_horizontal" />
+        </GridLayout>
+
+        <GridLayout
+            android:id="@+id/gridBoardLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
         </GridLayout>
     </LinearLayout>
 </layout>
