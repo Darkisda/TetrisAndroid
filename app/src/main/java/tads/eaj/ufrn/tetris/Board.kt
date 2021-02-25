@@ -1,6 +1,8 @@
 package tads.eaj.ufrn.tetris
 
+import android.content.Context
 import android.os.Bundle
+import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import tads.eaj.ufrn.tetris.databinding.BoardBinding
@@ -20,12 +22,15 @@ class Board : AppCompatActivity() {
 
         binding = DataBindingUtil.setContentView(this, R.layout.board)
 
+        var settings = getSharedPreferences(Constants.PREFS, Context.MODE_PRIVATE)
+
         binding.apply {
             val params = intent.extras
             val boardParams = params!!.getString(Constants.BOARD)
-            val difficultyParams = params!!.getString(Difficulties.DIFFICULTY)
 
-            game = Game(difficultyParams!!)
+            var difficulty = settings.getString(Difficulties.DIFFICULTY, Difficulties.EASY)
+
+            game = Game(difficulty!!)
 
             if (boardParams == Constants.NEW_GAME) {
                 textView3.text = Constants.NEW_GAME
@@ -35,5 +40,9 @@ class Board : AppCompatActivity() {
                 textView3.text = Constants.CONTINUE_GAME
             }
         }
+    }
+
+    override fun onPause() {
+        super.onPause()
     }
 }

@@ -7,5 +7,6 @@
     <string name="HARD">HARD</string>
     <string name="NEWGAME">NEW GAME</string>
     <string name="CONTINUE">CONTINUE</string>
-    <string name="CONFIGURATION">CONFIGURATION</string>
+    <string name="CONFIGURATION">SETTINGS</string>
+    <string name="PAUSE">PAUSE</string>
 </resources>

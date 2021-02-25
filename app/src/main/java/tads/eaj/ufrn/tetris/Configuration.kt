@@ -23,15 +23,15 @@ class Configuration : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.configuration)
 
         binding.apply {
-            easyButton.setOnClickListener {
+            easyButton!!.setOnClickListener {
                 finish()
             }
 
-            mediumButton.setOnClickListener {
+            mediumButton!!.setOnClickListener {
                 finish()
             }
 
-            hardButton.setOnClickListener {
+            hardButton!!.setOnClickListener {
                 finish()
             }
         }
@@ -48,12 +48,12 @@ class Configuration : AppCompatActivity() {
                 editor.putString(Difficulties.DIFFICULTY, Difficulties.EASY).apply()
                 editor.commit()
             }
-            if (hardButton!!.isChecked) {
-                editor.putString(Difficulties.DIFFICULTY, Difficulties.HARD).apply()
-                editor.commit()
-            }
             if(mediumButton!!.isChecked) {
                 editor.putString(Difficulties.DIFFICULTY, Difficulties.MEDIUM).apply()
+                editor.commit()
+            }
+            if (hardButton!!.isChecked) {
+                editor.putString(Difficulties.DIFFICULTY, Difficulties.HARD).apply()
                 editor.commit()
             }
             else {
