@@ -18,14 +18,14 @@ abstract class Block(var x: Int, var y: Int) : InterfaceMoves {
     override fun moveLeft() {
         piece1.moveLeft()
         piece2.moveLeft()
-        piece4.moveLeft()
         piece3.moveLeft()
+        piece4.moveLeft()
     }
 
     override fun moveRight() {
         piece1.moveRight()
-        piece2.moveLeft()
-        piece4.moveRight()
+        piece2.moveRight()
         piece3.moveRight()
+        piece4.moveRight()
     }
 }

@@ -9,4 +9,7 @@
     <string name="CONTINUE">CONTINUE</string>
     <string name="CONFIGURATION">SETTINGS</string>
     <string name="PAUSE">PAUSE</string>
+    <string name="POINTS">POINTS</string>
+    <string name="LEFT">LEFT</string>
+    <string name="RIGHT">RIGHT</string>
 </resources>
